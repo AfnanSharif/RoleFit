@@ -1,0 +1,44 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pr: none
+
+variables:
+  # Define these non-secret values in the pipeline UI or a variable group.
+  azureServiceConnection: rolefit-azure
+  azureSubscriptionId: 00000000-0000-0000-0000-000000000000
+  azureResourceGroup: rolefit-prod-rg
+  azureLocation: eastus
+  azureAcrName: replacewithgloballyuniqueacr
+  azureAppName: rolefit-studio
+  # Override in the pipeline UI with a secret value to enable hosted adapters.
+  openAiApiKey: ''
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - checkout: self
+    fetchDepth: 1
+
+  - task: AzureCLI@2
+    displayName: Build image and deploy Azure Container App
+    inputs:
+      azureSubscription: $(azureServiceConnection)
+      scriptType: bash
+      scriptLocation: inlineScript
+      workingDirectory: AI Resume Analyzer
+      inlineScript: |
+        set -Eeuo pipefail
+        export AZURE_SUBSCRIPTION_ID="$(azureSubscriptionId)"
+        export AZURE_RESOURCE_GROUP="$(azureResourceGroup)"
+        export AZURE_LOCATION="$(azureLocation)"
+        export AZURE_ACR_NAME="$(azureAcrName)"
+        export AZURE_APP_NAME="$(azureAppName)"
+        export IMAGE_TAG="$(Build.SourceVersion)"
+        bash deploy/azure/deploy.sh
+    env:
+      # Create openAiApiKey as a secret pipeline variable; an empty value keeps local-only mode.
+      OPENAI_API_KEY: $(openAiApiKey)

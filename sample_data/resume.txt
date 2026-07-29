@@ -1,0 +1,23 @@
+SAMIRA KHAN
+samira@example.com | linkedin.com/in/samirakhan
+
+SUMMARY
+Data engineer with five years of experience building reliable analytics platforms and collaborating with product teams.
+
+SKILLS
+Python, SQL, AWS, Docker, Airflow, dbt, Snowflake, Git, data modeling, stakeholder management, Agile
+
+EXPERIENCE
+Senior Data Engineer — Northstar Labs | 2023–Present
+- Built Python and SQL ingestion pipelines that reduced daily processing time by 38%.
+- Automated Airflow quality checks across 120 datasets and reduced recurring incidents by 24%.
+- Led data modeling workshops with six product and analytics stakeholders.
+- Optimized Snowflake warehouse policies, cutting monthly compute cost by 19%.
+
+Data Engineer — Harbor Analytics | 2021–2023
+- Developed dbt models and documented metric definitions for finance and growth teams.
+- Created Docker-based local environments that shortened onboarding from five days to two.
+- Delivered AWS monitoring dashboards and participated in an Agile on-call rotation.
+
+EDUCATION
+BS Computer Science — City University, 2021

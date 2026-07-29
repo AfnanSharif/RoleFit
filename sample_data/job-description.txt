@@ -1,0 +1,17 @@
+Senior Analytics Engineer
+
+We are looking for an analytics engineer to develop trusted data products for product and finance teams. You will build maintainable SQL and dbt models, orchestrate pipelines with Airflow, and improve data quality in Snowflake. The role partners closely with stakeholders to define metrics and communicate tradeoffs.
+
+Required skills and experience:
+- Advanced SQL and Python
+- Production experience with dbt, Snowflake, and Airflow
+- Data modeling and data quality practices
+- Git, Docker, and CI/CD workflows
+- Clear communication and stakeholder management
+
+Preferred:
+- AWS and Terraform
+- Experience with Tableau or another data visualization platform
+- Leadership in Agile delivery teams
+
+Success in this role means reliable datasets, documented metrics, thoughtful technical decisions, and measurable improvements to developer and analyst workflows.
